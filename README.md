@@ -25,6 +25,9 @@ Move the file to a folder within the $PATH, e.g.
 ## Email Sending Setup
 For sending emails via GMail I needed an App Password from Google, which itself requires 2-Step Verification to be setup on the account.
 
+## Credentials Setup
+Be sure to update the script to add usernames, passwords, and email addresses at the top.
+
 ## Run on Boot and Restarting
 Getting it to run on boot using rc.local:
 
