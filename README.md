@@ -28,12 +28,17 @@ For sending emails via GMail I needed an App Password from Google, which itself 
 ## Credentials Setup
 Be sure to update the script to add usernames, passwords, and email addresses at the top.
 
-## Run on Boot and Restarting
-Getting it to run on boot using rc.local:
+## Run Script on Boot
+How to run the script at startup:
+Applications --> Settings Manager --> System --> Session and Startup
+Click + and add a job with a path to the script, e.g.
+  Name: SMS Forwarder
+  Description: Forwarding SMS messages from Netgear router to an email address
+  Command: python3 /home/orangepi/Documents/SMS-Scraping/myselenium.py
+  Trigger: On Login
 
-https://devicetests.com/run-python-script-os-boot-ubuntu
-
-And getting the device to reboot every day at 1:01am (1am, with a 70 sec sleep) using cron:
+## Restarting the OrangePi
+Getting the device to reboot every day at 1:01am (1am, with a 70 sec sleep) using cron:
 
 0 1 * * * sleep 70 && reboot
 
